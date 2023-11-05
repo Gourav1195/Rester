@@ -11,7 +11,7 @@ import {
   ErrorComponent,
   notificationProvider,
   RefineSnackbarProvider,
-  ThemedLayoutV2,
+  // ThemedLayoutV2,
 } from "@refinedev/mui";
 
 import CssBaseline from "@mui/material/CssBaseline";
@@ -42,6 +42,13 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { parseJwt } from "utils/parse-jwt";
 import { Header } from "./components/header";
 import { ColorModeContextProvider } from "./contexts/color-mode";
+
+//                To use ThemedLayoutV2    
+import { ThemedLayoutV2 } from "components/layout"; 
+// import { ThemedHeaderV2 } from "components/layout/header";                           
+// import { ThemedSiderV2 } from "components/layout/sider";                            
+// import { ThemedTitleV2 } from "components/layout/title";   
+
 
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
