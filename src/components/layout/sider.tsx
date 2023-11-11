@@ -16,7 +16,7 @@ import {
   useWarnAboutChange,
 } from "@refinedev/core";
 import {
-  ThemedTitleV2 as DefaultTitle,
+  // ThemedTitleV2 as DefaultTitle,
   useThemedLayoutContext,
 } from "@refinedev/mui";
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
@@ -37,6 +37,9 @@ import ListItemText from "@mui/material/ListItemText";
 import Paper from "@mui/material/Paper";
 import Tooltip from "@mui/material/Tooltip";
 import type { RefineThemedLayoutV2SiderProps } from "@refinedev/mui";
+
+import { ThemedTitleV2 as DefaultTitle }from "components/layout/title";   
+
 
 export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
   Title: TitleFromProps,
@@ -280,7 +283,9 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
             pl: 2,
             py: 1,
             justifyContent: "center",
-            color: selectedKey === "/" ? "primary.main" : "text.primary",
+            color: selectedKey === "/" ? "#fff" : "#808191",
+            marginLeft: '8px',
+            marginRight: '14px',
           }}
         >
           <ListItemIcon
